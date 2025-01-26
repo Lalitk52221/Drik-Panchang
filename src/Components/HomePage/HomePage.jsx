@@ -1,18 +1,12 @@
-import React from "react";
 import Header from "./Header";
 import { FaXTwitter } from "react-icons/fa6";
-import { AiOutlineLike, AiTwotoneLike } from "react-icons/ai";
-import Timer from "../Timer";
-import { useSelector } from "react-redux";
+import { AiTwotoneLike } from "react-icons/ai";
 import moment from "moment";
 import Footer from "./Footer";
 
 const HomePage = () => {
-  const date = useSelector((state) => state.dateTime.dateValue);
-  const time = useSelector((state) => state.dateTime.timeValue);
   return (
     <section className="w-screen flex flex-col items-center ">
-      {/* <Timer/> */}
       <Header />
       <section className="flex justify-center p-2 bg-[#E9A74E] w-full">
         <div className=" w-[80%]">
@@ -20,9 +14,9 @@ const HomePage = () => {
             <img
               src="https://www.drikpanchang.com/images/icon/deepak/deepam.gif.pagespeed.ce.H0RitBz0ww.gif"
               alt="deep-logo"
-              className="w-12"
+              className="w-12 hidden lg:block"
             />
-            <p className="text-3xl text-red-800">
+            <p className="text-xl text-center font-bold lg:text-3xl text-red-800">
               Online{" "}
               <span className="bg-red-800 text-amber-200 px-2 py-1">
                 {" "}
@@ -33,10 +27,10 @@ const HomePage = () => {
             <img
               src="https://www.drikpanchang.com/images/icon/deepak/deepam.gif.pagespeed.ce.H0RitBz0ww.gif"
               alt="deep-logo"
-              className="w-12"
+              className="w-12 hidden lg:block"
             />
           </div>
-          <div className="text-sm gap-2 flex justify-end items-center my-2">
+          <div className="text-sm gap-2 flex lg:justify-end items-center my-2">
             <button className="gap-1 cursor-pointer flex items-center justify-center py-1 px-3 bg-black text-white rounded-2xl ">
               {" "}
               <FaXTwitter /> Post{" "}
@@ -56,59 +50,49 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className="pageWrapper pattern ">
-        <div className="py-2">
-          <div className="bg-white p-4 rounded shadow-md">
-            <div className="flex justify-between items-center mb-4">
-              <button className="bg-gray-200 px-4 py-2 rounded">
-                Stop seeing this ad
-              </button>
-              <button className="bg-gray-200 px-4 py-2 rounded">
-                Why this ad?
-              </button>
-            </div>
-            <div className="text-center">
-              <button className="title-color text-white px-4 py-2 rounded">
-                Sign in with Google Dialog
-              </button>
-            </div>
-          </div>
-        </div>
 
-        <div className="bg-[#948720] rounded shadow-md text-white p-2 text-center">
-          <div className="flex justify-around items-center ">
-            <div className="leading-5 text-left">
-              <div className="flex items-center">
-                <img
-                  src="./moon/moon.png"
-                  alt="Moon Phase"
-                  className="w-18 h-18 mr-2"
-                />
+      <section className="pageWrapper">
+        <div className="pattern w-0 lg:w-[20px]" />
+        <div className="w-full">
+          <div className="bg-[#948720] text-white lg:p-2 p-1 text-xs text-center">
+            <div className="flex justify-around items-center ">
+              <div className="leading-5 text-left">
+                <div className="flex items-center">
+                  <img
+                    src="./moon/moon.png"
+                    alt="Moon Phase"
+                    className="w-10 h-10 lg:w-18 lg:h-18 mr-2"
+                  />
 
-                <div>
-                  <h2 className="text-xl font-bold text-orange-300">
-                    12, Magha
-                  </h2>
-                  <p>Krishna Paksha, Dwadashi</p>
-                  <p>2081 Pingala, Vikrama Samvata</p>
+                  <div>
+                    <h2 className="text-xl font-bold text-orange-300">
+                      12, Magha
+                    </h2>
+                    <p>Krishna Paksha, Dwadashi</p>
+                    <p>2081 Pingala, Vikrama Samvata</p>
+                  </div>
                 </div>
+                <p>New Delhi, India</p>
               </div>
-              <p>New Delhi, India</p>
+              <div className="text-center leading-5">
+                <h2 className="text-2xl leading-5 font-bold text-orange-300">
+                  {moment().format("DD")}
+                </h2>
+                <p>{moment().format("MMMM YYYY")}</p>
+                <p>{moment().format("dddd")}</p>
+              </div>
             </div>
-            <div className="text-center leading-5">
-              <h2 className="text-2xl leading-5 font-bold text-orange-300">
-                {moment().format("DD")}
-              </h2>
-              <p>{moment().format("MMMM YYYY")}</p>
-              <p>{moment().format("dddd")}</p>
-            </div>
+            <a href="#" className=" underline">
+              Shattila Ekadashi Parana, Republic Day
+            </a>
           </div>
-          <a href="#" className=" underline">
-            Shattila Ekadashi Parana, Republic Day
-          </a>
         </div>
+        <div className="pattern w-0 lg:w-[20px]" />
       </section>
-      <Footer/>
+
+      <section></section>
+
+      <Footer />
     </section>
   );
 };

@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 @import "tailwindcss";
 
 @theme {
@@ -8,19 +13,29 @@
     background-color: #ffc15e;
   }
   .pattern {
-    background-image: url(./images/border_pattern.svg), url(./images/border_pattern.svg);
+    background-image: url(./images/border_pattern.svg),
+      url(./images/border_pattern.svg);
     background-repeat: repeat-y;
-    background-size: 15px;
-    border: 4px solid transparent;
+    background-size: 20px;
     -webkit-mask: border-box;
     mask: border-box;
     mask-composite: exclude;
     -webkit-mask-composite: destination-out;
+    width: 20px;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
 /* *Common Styles */
+
 .container {
-  @apply p-5 px-12 md:px-2 w-full;
+  @apply lg:px-12 px-2 md:px-2 w-full;
 }
 .headerIcon {
   @apply border-orange-100/40 border p-1.5 rounded bg-orange-800 shadow-lg min-w-12  h-12 hover:bg-orange-700 cursor-pointer hover:shadow-xl flex items-center justify-center transition-all ring-black;
@@ -33,14 +48,14 @@ input {
   @apply bg-[#FFC15E] text-lg text-orange-950 rounded-t-sm px-2 py-1;
 }
 .pageWrapper {
-  @apply w-[80vw] p-6;
+  @apply lg:w-[80vw] w-full justify-center flex;
 }
 footer {
-  @apply w-full px-10;
-}
-ul li {
-  @apply text-base  mb-2 hover:underline transition-all list-disc text-orange-300 ml-8 cursor-pointer;
+  @apply w-full lg:px-10;
 }
 .footer-heading {
   @apply font-bold mb-4 pb-1 text-orange-300 border-b-1;
+}
+ul li {
+  @apply text-base  mb-2 hover:underline transition-all list-disc text-orange-300 ml-8 cursor-pointer;
 }

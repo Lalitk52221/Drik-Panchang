@@ -3,6 +3,7 @@ import { Zodiac } from "../../Data/Zodiac";
 import Timer from "../Timer";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { FaRegClock } from "react-icons/fa6";
 
 const Navbar = () => {
   
@@ -13,11 +14,11 @@ const Navbar = () => {
           <img
             src="./images/logo.png"
             alt="Drik Panchang"
-            className="h-16 mx-4"
+            className="h-10 lg:h-16 lg:mx-4"
           />
         </div>
         <div className="flex items-center space-x-4 ">
-          <div className="flex justify-center items-center rounded bg-[#E9A74E] text-orange-900 px-2">
+          <div className="flex justify-center items-center rounded lg:bg-[#E9A74E] text-orange-900 px-2">
             <img
               src="./images/search.png"
               alt="setting"
@@ -26,32 +27,33 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search Drik Panchang"
-              className="p-2 h-12 placeholder:text-orange-900/60 font-semibold"
+              className="hidden lg:block p-2 h-12 placeholder:text-orange-900/60 font-semibold"
             />
           </div>
-          <button className="headerIcon">EN</button>
+          <button className="lg:headerIcon">EN</button>
           <button className=" bg-white cursor-pointer h-12 text-gray-600 font-semibold px-4 py-2 rounded">
-            Sign in with Google
+            Sign in
           </button>
-          <button className="headerIcon">
+          <button className="lg:headerIcon lg:block hidden">
             <img src="./images/play-store.png" alt="apple" className="w-7" />
           </button>
-          <button className="headerIcon">
+          <button className="lg:headerIcon lg:block hidden">
             <img
               src="./images/apple.jpeg"
               alt="apple"
               className="w-7 mix-blend-color-burn"
             />
           </button>
-          <button className="headerIcon">
+          <button className="lg:headerIcon">
             <img src="./images/setting.svg" alt="setting" className=" w-7   " />
           </button>
-          <button className="headerIcon text-amber-100 ">
-            <Timer />
+          <button className="lg:headerIcon  text-amber-100 text-xl ">
+           <p className="hidden lg:block"> <Timer /></p>
+           <p className="block lg:hidden"> <FaRegClock  /></p>
           </button>
         </div>
       </header>
-      <nav className="bg-orange-800 text-white p-2 flex justify-center space-x-2">
+      <nav className="bg-orange-800 text-white p-2 flex justify-center space-x-2 hidden lg:block">
         <Link to={"/"} href="#" className="hover:underline headerMenu">
           Home
         </Link>
@@ -87,8 +89,8 @@ const Navbar = () => {
         </Link>
       </nav>
 
-      <div className="bg-[#E9A74E] p-4 flex justify-around">
-        <div className="flex space-x-4 font-comic">
+      <div className="bg-[#E9A74E] flex justify-around">
+        <div className="flex lg:justify-center space-x-4 px-3 py-2 font-comic overflow-auto w-screen no-scrollbar scroll-smooth ">
           {Zodiac.map((item, index) => (
             <div key={index}>
               <div className="text-center">
