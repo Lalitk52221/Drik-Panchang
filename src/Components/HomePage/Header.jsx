@@ -1,15 +1,13 @@
-import React from "react";
 import { Zodiac } from "../../Data/Zodiac";
 import Timer from "../Timer";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { FaRegClock } from "react-icons/fa6";
+import { FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
-  
   return (
     <div>
-      <header className="bg-orange-800 border-b-1  text-white p-1 flex justify-between items-center w-screen">
+      <header className="bg-orange-800 border-b-1  text-white px-3 py-1 flex justify-between items-center w-screen">
         <div className="flex items-center">
           <img
             src="./images/logo.png"
@@ -17,13 +15,9 @@ const Navbar = () => {
             className="h-10 lg:h-16 lg:mx-4"
           />
         </div>
-        <div className="flex items-center space-x-4 ">
+        <div className="flex items-center lg:space-x-4 space-x-2 ">
           <div className="flex justify-center items-center rounded lg:bg-[#E9A74E] text-orange-900 px-2">
-            <img
-              src="./images/search.png"
-              alt="setting"
-              className=" w-4 h-4 shadow-2xl   "
-            />
+            <FaSearch className="text-white" />
             <input
               type="text"
               placeholder="Search Drik Panchang"
@@ -31,7 +25,7 @@ const Navbar = () => {
             />
           </div>
           <button className="lg:headerIcon">EN</button>
-          <button className=" bg-white cursor-pointer h-12 text-gray-600 font-semibold px-4 py-2 rounded">
+          <button className=" bg-white cursor-pointer h-12 font-semibold px-2 lg:px-4 leading-5 flex items-center text-blue-800 py-2 rounded">
             Sign in
           </button>
           <button className="lg:headerIcon lg:block hidden">
@@ -48,12 +42,18 @@ const Navbar = () => {
             <img src="./images/setting.svg" alt="setting" className=" w-7   " />
           </button>
           <button className="lg:headerIcon  text-amber-100 text-xl ">
-           <p className="hidden lg:block"> <Timer /></p>
-           <p className="block lg:hidden"> <FaRegClock  /></p>
+            <p className="hidden lg:block">
+              {" "}
+              <Timer />
+            </p>
+            <p className="block lg:hidden">
+              {" "}
+              <FaRegClock />
+            </p>
           </button>
         </div>
       </header>
-      <nav className="bg-orange-800 text-white p-2 flex justify-center space-x-2 hidden lg:block">
+      <nav className="bg-orange-800 text-white p-2 lg:flex justify-center space-x-2 hidden">
         <Link to={"/"} href="#" className="hover:underline headerMenu">
           Home
         </Link>

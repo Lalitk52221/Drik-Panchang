@@ -3,6 +3,10 @@
   scroll-behavior: smooth;
 }
 
+
+
+
+
 @import "tailwindcss";
 
 @theme {
@@ -23,6 +27,10 @@
     -webkit-mask-composite: destination-out;
     width: 20px;
   }
+  .bg-pattern{
+     background-image: url("https://www.drikpanchang.com/images/home/xcenterpattern.jpg.pagespeed.ic.dK3xVW_WmK.webp"),url("https://www.drikpanchang.com/images/home/xcenterpattern.jpg.pagespeed.ic.dK3xVW_WmK.webp");
+  background-repeat: repeat;
+  }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -35,10 +43,17 @@
 /* *Common Styles */
 
 .container {
-  @apply lg:px-12 px-2 md:px-2 w-full;
+  @apply lg:px-12 px-1 md:px-2 w-full;
 }
+/* .headerIcon {
+  @apply border-orange-100/40 border p-1.5 rounded bg-orange-800 shadow-lg min-w-12  h-12 hover:bg-orange-700 cursor-pointer hover:shadow-xl flex items-center justify-center transition-all ring-black  ;
+} */
 .headerIcon {
-  @apply border-orange-100/40 border p-1.5 rounded bg-orange-800 shadow-lg min-w-12  h-12 hover:bg-orange-700 cursor-pointer hover:shadow-xl flex items-center justify-center transition-all ring-black;
+  @apply border-orange-100/40 border p-1.5 rounded bg-orange-800 shadow-lg min-w-12 h-12 hover:bg-orange-700 cursor-pointer hover:shadow-xl flex items-center justify-center transition-all ring-black;
+}
+
+.hidden-sm {
+  @apply hidden;
 }
 
 input {
@@ -57,5 +72,5 @@ footer {
   @apply font-bold mb-4 pb-1 text-orange-300 border-b-1;
 }
 ul li {
-  @apply text-base  mb-2 hover:underline transition-all list-disc text-orange-300 ml-8 cursor-pointer;
+  @apply text-base mb-2 hover:underline transition-all list-disc text-orange-300 ml-3 cursor-pointer;
 }

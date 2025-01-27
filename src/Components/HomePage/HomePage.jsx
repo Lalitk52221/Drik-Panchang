@@ -3,25 +3,26 @@ import { FaXTwitter } from "react-icons/fa6";
 import { AiTwotoneLike } from "react-icons/ai";
 import moment from "moment";
 import Footer from "./Footer";
+import Cards from "./Cards";
 
 const HomePage = () => {
   return (
-    <section className="w-screen flex flex-col items-center ">
+    <section className="w-screen flex flex-col bg-pattern items-center ">
       <Header />
       <section className="flex justify-center p-2 bg-[#E9A74E] w-full">
-        <div className=" w-[80%]">
+        <div className="lg:w-[70%] w-full">
           <div className="flex justify-between items-center w-full">
             <img
               src="https://www.drikpanchang.com/images/icon/deepak/deepam.gif.pagespeed.ce.H0RitBz0ww.gif"
               alt="deep-logo"
               className="w-12 hidden lg:block"
             />
-            <p className="text-xl text-center font-bold lg:text-3xl text-red-800">
+            <p className="text-xl text-center w-full px-2 font-bold lg:text-3xl text-red-800 lg:flex flex-col lg:justify-center items-center">
               Online{" "}
-              <span className="bg-red-800 text-amber-200 px-2 py-1">
+              <p className="bg-red-800 text-amber-200 px-2 py-1 w-fit ">
                 {" "}
                 Panchang and Hindu Calendar
-              </span>{" "}
+              </p>{" "}
               for the world{" "}
             </p>
             <img
@@ -86,11 +87,21 @@ const HomePage = () => {
               Shattila Ekadashi Parana, Republic Day
             </a>
           </div>
+        
+      
+        <div className="flex p-2 title-color">
+          <img src="https://www.drikpanchang.com/images/icon/location/2x/xicon_location.png.pagespeed.ic.XfaaFIeRO7.webp" alt="map icon" width={30}  />
+          <input type="search" placeholder="Enter City Name" className="border border-orange-900 rounded-sm px-2" />
+        </div>
+        <img src="./images/canvas.png" alt="" className="title-color w-full lg:px-30" />
+        
+      <Cards/>
         </div>
         <div className="pattern w-0 lg:w-[20px]" />
-      </section>
 
-      <section></section>
+
+
+      </section>
 
       <Footer />
     </section>
