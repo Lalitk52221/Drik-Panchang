@@ -18,7 +18,7 @@ const Navbar = () => {
           {hideMenu ? (
             ""
           ) : (
-            <span className="lg: hidden text-orange-300 text-3xl cursor-pointer">
+            <span className="lg:hidden text-orange-300 text-3xl cursor-pointer">
               <MdMenu onClick={()=>dispatch(toggle())} />
             </span>
           )}
