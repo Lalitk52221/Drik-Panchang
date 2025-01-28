@@ -4,9 +4,6 @@
 }
 
 
-
-
-
 @import "tailwindcss";
 
 @theme {
@@ -45,9 +42,7 @@
 .container {
   @apply lg:px-12 px-1 md:px-2 w-full;
 }
-/* .headerIcon {
-  @apply border-orange-100/40 border p-1.5 rounded bg-orange-800 shadow-lg min-w-12  h-12 hover:bg-orange-700 cursor-pointer hover:shadow-xl flex items-center justify-center transition-all ring-black  ;
-} */
+
 .headerIcon {
   @apply border-orange-100/40 border p-1.5 rounded bg-orange-800 shadow-lg min-w-12 h-12 hover:bg-orange-700 cursor-pointer hover:shadow-xl flex items-center justify-center transition-all ring-black;
 }
@@ -73,4 +68,13 @@ footer {
 }
 ul li {
   @apply text-base mb-2 hover:underline transition-all list-disc text-orange-300 ml-3 cursor-pointer;
+}
+.sidebar{
+  @apply overflow-y-scroll
+}
+.sidenavbar img{
+  @apply w-8
+}
+.sidenavbar li{
+  @apply text-orange-900 flex items-center px-2 py-5.5 gap-3 font-semibold h-9 border-b-1 list-none m-0
 }

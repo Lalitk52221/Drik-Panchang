@@ -17,9 +17,9 @@ const HomePage = () => {
               alt="deep-logo"
               className="w-12 hidden lg:block"
             />
-            <p className="text-xl text-center w-full px-2 font-bold lg:text-3xl text-red-800 lg:flex flex-col lg:justify-center items-center">
+            <p className="text-xl w-full px-2 font-bold lg:text-3xl text-red-800 flex flex-wrap lg:justify-center items-center justify-center">
               Online{" "}
-              <p className="bg-red-800 text-amber-200 px-2 py-1 w-fit ">
+              <p className="bg-red-800 text-amber-200 py-1 w-fit px-3">
                 {" "}
                 Panchang and Hindu Calendar
               </p>{" "}

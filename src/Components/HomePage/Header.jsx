@@ -3,16 +3,34 @@ import Timer from "../Timer";
 import { Link } from "react-router-dom";
 import { FaRegClock } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { MdMenu } from "react-icons/md";
+import { toggle } from "../Redux/toggle";
 
 const Navbar = () => {
+  const hideMenu = useSelector((state) => state.hideMenu.value);
+  const dispatch = useDispatch();
+
   return (
     <div>
       <header className="bg-orange-800 border-b-1  text-white px-3 py-1 flex justify-between items-center w-screen">
-        <div className="flex items-center">
+        <div className="flex items-center gap-5">
+          {hideMenu ? (
+            ""
+          ) : (
+            <span className="lg: hidden text-orange-300 text-3xl cursor-pointer">
+              <MdMenu onClick={()=>dispatch(toggle())} />
+            </span>
+          )}
           <img
             src="./images/logo.png"
             alt="Drik Panchang"
-            className="h-10 lg:h-16 lg:mx-4"
+            className="lg:h-16 lg:mx-4 hidden lg:block"
+          />
+          <img
+            src="./images/panditji.png"
+            alt="Drik Panchang"
+            className="h-12 lg:mx-4 lg:hidden"
           />
         </div>
         <div className="flex items-center lg:space-x-4 space-x-2 ">
