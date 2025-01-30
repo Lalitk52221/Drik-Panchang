@@ -75,6 +75,9 @@ ul li {
 .sidenavbar img{
   @apply w-8
 }
-.sidenavbar li{
-  @apply text-orange-900 flex items-center px-2 py-5.5 gap-3 font-semibold h-9 border-b-1 list-none m-0
+.sidenavbar ul li{
+  @apply text-orange-900 flex items-center px-2 py-5.5 gap-3 font-semibold h-9 border-b-1 list-none m-0 justify-between
+}
+.sidenavbar .nested-list li{
+  @apply bg-[#f8d396] pl-15
 }

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { HomepageCardsData } from "../../Data/HomepageCardData";
 
 const Cards = () => {
@@ -7,7 +7,7 @@ const Cards = () => {
       {HomepageCardsData.map((data, index) => (
         <div
           key={index}
-          className="w-full lg:w-90 border-red-900/80 border-1 rounded-md shadow-md"
+          className="w-full md:w-90 border-red-900/80 border-1 rounded-md shadow-md"
         >
           <div className="text-red-950">
             <h1 className="bg-amber-600 rounded-t-md px-2 py-1 text-lg font-semibold">
